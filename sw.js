@@ -1,7 +1,3 @@
-/*
- Service Worker implementation
- inspired from https://github.com/GoogleChromeLabs/airhorn/blob/master/app/sw.js
- */
 
 let version = '1.4.0';
 
@@ -13,11 +9,7 @@ self.addEventListener('activate',  event => {
 });
 
 
-/*
- * Adapted from https://developers.google.com/web/ilt/pwa/lab-caching-files-with-service-worker
- * Another way to cache is to cache it in 'install' event, but I am not sure if rubrics demands that
- * It says visited page should show when there is no network access so only caching requests as they happen
- */
+
 self.addEventListener('fetch', function(event) {
   console.log('Fetch event for ', event.request.url);
 
